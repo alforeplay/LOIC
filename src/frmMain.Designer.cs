@@ -123,7 +123,7 @@ namespace LOIC
             this.groupBox1.Size = new System.Drawing.Size(488, 75);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "1. Select your target";
+            this.groupBox1.Text = "1. 타겟을 선택합니다";
             //
             // label2
             //
@@ -142,7 +142,7 @@ namespace LOIC
             this.cmdTargetIP.Name = "cmdTargetIP";
             this.cmdTargetIP.Size = new System.Drawing.Size(71, 22);
             this.cmdTargetIP.TabIndex = 4;
-            this.cmdTargetIP.Text = "Lock on";
+            this.cmdTargetIP.Text = "조준";
             this.cmdTargetIP.UseVisualStyleBackColor = false;
             this.cmdTargetIP.Click += new System.EventHandler(this.cmdTargetIP_Click);
             //
@@ -155,7 +155,7 @@ namespace LOIC
             this.txtTargetIP.Name = "txtTargetIP";
             this.txtTargetIP.Size = new System.Drawing.Size(365, 20);
             this.txtTargetIP.TabIndex = 3;
-            this.TTip.SetToolTip(this.txtTargetIP, "If you know your target\'s IP, enter the IP here and click \"Lock on\"");
+            this.TTip.SetToolTip(this.txtTargetIP, "타겟의 IP를 입력하시고 \"장전\"을 누르세요");
             //
             // label1
             //
@@ -174,7 +174,7 @@ namespace LOIC
             this.cmdTargetURL.Name = "cmdTargetURL";
             this.cmdTargetURL.Size = new System.Drawing.Size(71, 22);
             this.cmdTargetURL.TabIndex = 2;
-            this.cmdTargetURL.Text = "Lock on";
+            this.cmdTargetURL.Text = "조준";
             this.cmdTargetURL.UseVisualStyleBackColor = false;
             this.cmdTargetURL.Click += new System.EventHandler(this.cmdTargetURL_Click);
             //
@@ -187,7 +187,7 @@ namespace LOIC
             this.txtTargetURL.Name = "txtTargetURL";
             this.txtTargetURL.Size = new System.Drawing.Size(365, 20);
             this.txtTargetURL.TabIndex = 1;
-            this.TTip.SetToolTip(this.txtTargetURL, "If you don\'t know your target\'s IP, enter a URL here and click \"Lock on\"");
+            this.TTip.SetToolTip(this.txtTargetURL, "여기다가 URL (인터넷 주소) 을 입력하시고 \"조준\"을 누르세요!");
             //
             // groupBox2
             //
@@ -198,7 +198,7 @@ namespace LOIC
             this.groupBox2.Size = new System.Drawing.Size(758, 103);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Selected target";
+            this.groupBox2.Text = "조준 대상";
             //
             // txtTarget
             //
@@ -211,9 +211,9 @@ namespace LOIC
             this.txtTarget.Size = new System.Drawing.Size(746, 76);
             this.txtTarget.TabIndex = 1;
             this.txtTarget.TabStop = false;
-            this.txtTarget.Text = "N O N E !";
+            this.txtTarget.Text = "없 음 !";
             this.txtTarget.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TTip.SetToolTip(this.txtTarget, "The currently selected target");
+            this.TTip.SetToolTip(this.txtTarget, "당신이 조준한 곳입니다");
             this.txtTarget.Enter += new System.EventHandler(this.txtTarget_Enter);
             //
             // groupBox3
@@ -246,7 +246,7 @@ namespace LOIC
             this.groupBox3.Size = new System.Drawing.Size(757, 130);
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "2. Attack options";
+            this.groupBox3.Text = "2. 공격 설정";
             //
             // chkAllowGzip
             //
@@ -256,8 +256,8 @@ namespace LOIC
             this.chkAllowGzip.Name = "chkAllowGzip";
             this.chkAllowGzip.Size = new System.Drawing.Size(68, 18);
             this.chkAllowGzip.TabIndex = 33;
-            this.chkAllowGzip.Text = "use gZip";
-            this.TTip.SetToolTip(this.chkAllowGzip, "If checked, enables Gzip support for HTTP methods");
+            this.chkAllowGzip.Text = "gZip 압축 사용";
+            this.TTip.SetToolTip(this.chkAllowGzip, "HTTP 공격시 Gzip 압축을 설정합니다");
             this.chkAllowGzip.UseVisualStyleBackColor = true;
             //
             // chkUseGet
@@ -268,8 +268,8 @@ namespace LOIC
             this.chkUseGet.Name = "chkUseGet";
             this.chkUseGet.Size = new System.Drawing.Size(67, 18);
             this.chkUseGet.TabIndex = 32;
-            this.chkUseGet.Text = "use GET";
-            this.TTip.SetToolTip(this.chkUseGet, "If checked it uses the GET method instead of POST.");
+            this.chkUseGet.Text = "GET 패킷";
+            this.TTip.SetToolTip(this.chkUseGet, "GET 패킷을 POST 대신 사용합니다.");
             this.chkUseGet.UseVisualStyleBackColor = true;
             //
             // label3
@@ -278,7 +278,7 @@ namespace LOIC
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(92, 15);
             this.label3.TabIndex = 31;
-            this.label3.Text = "Sockets / Thread";
+            this.label3.Text = "소켓 수 / 쓰레드";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             //
             // txtSLSpT
@@ -294,7 +294,7 @@ namespace LOIC
             this.txtSLSpT.TabIndex = 30;
             this.txtSLSpT.Text = "25";
             this.txtSLSpT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TTip.SetToolTip(this.txtSLSpT, "Amount of sockets per thread");
+            this.TTip.SetToolTip(this.txtSLSpT, "쓰레드당 공격수");
             //
             // chkMsgRandom
             //
@@ -302,8 +302,8 @@ namespace LOIC
             this.chkMsgRandom.Name = "chkMsgRandom";
             this.chkMsgRandom.Size = new System.Drawing.Size(212, 18);
             this.chkMsgRandom.TabIndex = 29;
-            this.chkMsgRandom.Text = "Append random chars to the message";
-            this.TTip.SetToolTip(this.chkMsgRandom, "Enable appending random chars to the message every request");
+            this.chkMsgRandom.Text = "랜덤 메세지 전송";
+            this.TTip.SetToolTip(this.chkMsgRandom, "매번 메세지 보낼때 마다 다른 메세지를 보냅니다");
             //
             // chkRandom
             //
@@ -313,8 +313,8 @@ namespace LOIC
             this.chkRandom.Name = "chkRandom";
             this.chkRandom.Size = new System.Drawing.Size(187, 18);
             this.chkRandom.TabIndex = 28;
-            this.chkRandom.Text = "Append random chars to the URL";
-            this.TTip.SetToolTip(this.chkRandom, "Enable appending random chars to the subsite every request");
+            this.chkRandom.Text = "URL 랜덤화";
+            this.TTip.SetToolTip(this.chkRandom, "URL에 랜덤 문자를 삽입해 밴을 막습니다");
             this.chkRandom.UseVisualStyleBackColor = true;
             //
             // lbSepOptions
@@ -332,7 +332,7 @@ namespace LOIC
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(105, 16);
             this.label18.TabIndex = 25;
-            this.label18.Text = "TCP / UDP message";
+            this.label18.Text = "TCP / UDP 메세지";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             //
             // label17
@@ -341,7 +341,7 @@ namespace LOIC
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(77, 17);
             this.label17.TabIndex = 24;
-            this.label17.Text = "HTTP Subsite";
+            this.label17.Text = "HTTP 사이트 위치";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             //
             // label9
@@ -350,7 +350,7 @@ namespace LOIC
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(50, 15);
             this.label9.TabIndex = 23;
-            this.label9.Text = "Timeout";
+            this.label9.Text = "TimeOut";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             //
             // label7
@@ -359,7 +359,7 @@ namespace LOIC
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(57, 15);
             this.label7.TabIndex = 22;
-            this.label7.Text = "Threads";
+            this.label7.Text = "쓰레드";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             //
             // label4
@@ -368,7 +368,7 @@ namespace LOIC
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 15);
             this.label4.TabIndex = 21;
-            this.label4.Text = "Method";
+            this.label4.Text = "방식";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             //
             // label6
@@ -377,7 +377,7 @@ namespace LOIC
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(60, 15);
             this.label6.TabIndex = 20;
-            this.label6.Text = "Port";
+            this.label6.Text = "포트번호";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             //
             // label20
@@ -386,7 +386,7 @@ namespace LOIC
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(390, 15);
             this.label20.TabIndex = 18;
-            this.label20.Text = "<= faster     Speed     slower =>";
+            this.label20.Text = "<= 빠르게    속도 조정    느리게 =>";
             this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             //
             // chkWaitReply
@@ -396,8 +396,8 @@ namespace LOIC
             this.chkWaitReply.Name = "chkWaitReply";
             this.chkWaitReply.Size = new System.Drawing.Size(91, 18);
             this.chkWaitReply.TabIndex = 7;
-            this.chkWaitReply.Text = "Wait for reply";
-            this.TTip.SetToolTip(this.chkWaitReply, "Don\'t disconnect before the server\'s started to answer");
+            this.chkWaitReply.Text = "서버 답장 대기";
+            this.TTip.SetToolTip(this.chkWaitReply, "서버 답장 중 연결을 끊는 것을 방지합니다");
             this.chkWaitReply.UseVisualStyleBackColor = true;
             //
             // txtData
@@ -410,9 +410,9 @@ namespace LOIC
             this.txtData.Name = "txtData";
             this.txtData.Size = new System.Drawing.Size(312, 20);
             this.txtData.TabIndex = 3;
-            this.txtData.Text = "U dun goofed";
+            this.txtData.Text = "Alforeplay LOIC";
             this.txtData.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TTip.SetToolTip(this.txtData, "The data to send in TCP/UDP mode");
+            this.TTip.SetToolTip(this.txtData, "TCP / UDP모드에서 보낼 메세지를 정합니다");
             //
             // txtSubsite
             //
@@ -426,7 +426,7 @@ namespace LOIC
             this.txtSubsite.TabIndex = 2;
             this.txtSubsite.Text = "/";
             this.txtSubsite.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TTip.SetToolTip(this.txtSubsite, "What subsite to target (when using HTTP as type)");
+            this.TTip.SetToolTip(this.txtSubsite, "공격을 진행할 세부 사이트를 입력하세요 예를 들어 http://ygna.kp/asdf 일경우 \"/asdf\" 을 입력하시면 됩니다");
             //
             // txtTimeout
             //
@@ -440,7 +440,7 @@ namespace LOIC
             this.txtTimeout.TabIndex = 1;
             this.txtTimeout.Text = "30";
             this.txtTimeout.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TTip.SetToolTip(this.txtTimeout, "Max time in seconds to wait for a response.");
+            this.TTip.SetToolTip(this.txtTimeout, "응답 할때까지 기다릴 시간을 정합니다");
             //
             // txtThreads
             //
@@ -454,7 +454,7 @@ namespace LOIC
             this.txtThreads.TabIndex = 6;
             this.txtThreads.Text = "10";
             this.txtThreads.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TTip.SetToolTip(this.txtThreads, "How many users LOIC should emulate");
+            this.TTip.SetToolTip(this.txtThreads, "동시에 공격할 유저의 수를 정합니다");
             this.txtThreads.Leave += new System.EventHandler(this.txtThreads_Leave);
             //
             // cbMethod
@@ -475,7 +475,7 @@ namespace LOIC
             this.cbMethod.Size = new System.Drawing.Size(75, 22);
             this.cbMethod.TabIndex = 5;
             this.cbMethod.Text = "TCP";
-            this.TTip.SetToolTip(this.cbMethod, "What type of attack to launch");
+            this.TTip.SetToolTip(this.cbMethod, "공격 방식을 정합니다");
             this.cbMethod.SelectedIndexChanged += new System.EventHandler(this.cbMethod_SelectedIndexChanged);
             //
             // txtPort
@@ -490,7 +490,7 @@ namespace LOIC
             this.txtPort.TabIndex = 4;
             this.txtPort.Text = "80";
             this.txtPort.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TTip.SetToolTip(this.txtPort, "What port to attack (regular websites use 80)");
+            this.TTip.SetToolTip(this.txtPort, "공격할 포트 번호를 정하세요 (웹사이트는 80)");
             //
             // tbSpeed
             //
@@ -499,7 +499,7 @@ namespace LOIC
             this.tbSpeed.Name = "tbSpeed";
             this.tbSpeed.Size = new System.Drawing.Size(338, 45);
             this.tbSpeed.TabIndex = 8;
-            this.TTip.SetToolTip(this.tbSpeed, "Use this to increase or reduce attack speed");
+            this.TTip.SetToolTip(this.tbSpeed, "속도를 조정합니다");
             this.tbSpeed.ValueChanged += new System.EventHandler(this.tbSpeed_ValueChanged);
             //
             // groupBox4
@@ -511,7 +511,7 @@ namespace LOIC
             this.groupBox4.Size = new System.Drawing.Size(258, 75);
             this.groupBox4.TabIndex = 2;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "3. Ready?";
+            this.groupBox4.Text = "3. 준비 하시고....";
             //
             // cmdAttack
             //
@@ -522,8 +522,8 @@ namespace LOIC
             this.cmdAttack.Name = "cmdAttack";
             this.cmdAttack.Size = new System.Drawing.Size(246, 50);
             this.cmdAttack.TabIndex = 1;
-            this.cmdAttack.Text = "IMMA CHARGIN MAH LAZER";
-            this.TTip.SetToolTip(this.cmdAttack, "I sincerely hope you can guess what this button does.");
+            this.cmdAttack.Text = "알라후 앜후바르";
+            this.TTip.SetToolTip(this.cmdAttack, "이 버튼을 누르고 \"알라후 앜후바르\" 를 외치면 됩니다");
             this.cmdAttack.UseVisualStyleBackColor = false;
             this.cmdAttack.Click += new System.EventHandler(this.cmdAttack_Click);
             //
@@ -550,7 +550,7 @@ namespace LOIC
             this.groupBox5.Size = new System.Drawing.Size(758, 68);
             this.groupBox5.TabIndex = 5;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Attack status";
+            this.groupBox5.Text = "공격 상황";
             //
             // lbSepStatus
             //
@@ -559,7 +559,7 @@ namespace LOIC
             this.lbSepStatus.Name = "lbSepStatus";
             this.lbSepStatus.Size = new System.Drawing.Size(746, 1);
             this.lbSepStatus.TabIndex = 25;
-            this.lbSepStatus.Text = "Idle";
+            this.lbSepStatus.Text = "Idle(쉬는중)";
             this.lbSepStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             //
             // lbFailed
@@ -569,7 +569,7 @@ namespace LOIC
             this.lbFailed.Size = new System.Drawing.Size(101, 24);
             this.lbFailed.TabIndex = 24;
             this.lbFailed.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.TTip.SetToolTip(this.lbFailed, "How many times (in total) the webserver didn\'t respond. High number = server down" +
+            this.TTip.SetToolTip(this.lbFailed, "서버의 미 응답 횟수입니다. 숫자가 커지면 서버가 다운 되었음을 의미합니다" +
                     ".");
             //
             // lbRequested
@@ -579,7 +579,7 @@ namespace LOIC
             this.lbRequested.Size = new System.Drawing.Size(101, 24);
             this.lbRequested.TabIndex = 23;
             this.lbRequested.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.TTip.SetToolTip(this.lbRequested, "How many times (in total) a download has been requested");
+            this.TTip.SetToolTip(this.lbRequested, "서버에 요청된 다운로드 횟수");
             //
             // label22
             //
@@ -587,7 +587,7 @@ namespace LOIC
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(101, 24);
             this.label22.TabIndex = 22;
-            this.label22.Text = "Failed";
+            this.label22.Text = "실패";
             this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             //
             // label23
@@ -596,7 +596,7 @@ namespace LOIC
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(101, 24);
             this.label23.TabIndex = 21;
-            this.label23.Text = "Requested";
+            this.label23.Text = "요청";
             this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             //
             // lbDownloaded
@@ -606,7 +606,7 @@ namespace LOIC
             this.lbDownloaded.Size = new System.Drawing.Size(101, 24);
             this.lbDownloaded.TabIndex = 20;
             this.lbDownloaded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.TTip.SetToolTip(this.lbDownloaded, "How many times (in total) that a download has been initiated");
+            this.TTip.SetToolTip(this.lbDownloaded, "다운로드를 총 몇번 했는지");
             //
             // lbDownloading
             //
@@ -616,7 +616,7 @@ namespace LOIC
             this.lbDownloading.Size = new System.Drawing.Size(101, 24);
             this.lbDownloading.TabIndex = 19;
             this.lbDownloading.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.TTip.SetToolTip(this.lbDownloading, "How many threads that are downloading information from the server");
+            this.TTip.SetToolTip(this.lbDownloading, "서버에서 정보를 몇명이 받고 있는지");
             //
             // lbRequesting
             //
@@ -625,7 +625,7 @@ namespace LOIC
             this.lbRequesting.Size = new System.Drawing.Size(101, 24);
             this.lbRequesting.TabIndex = 18;
             this.lbRequesting.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.TTip.SetToolTip(this.lbRequesting, "How many threads that are requesting information from the server");
+            this.TTip.SetToolTip(this.lbRequesting, "정보를 요청중인 쓰레드 수");
             //
             // lbConnecting
             //
@@ -634,7 +634,7 @@ namespace LOIC
             this.lbConnecting.Size = new System.Drawing.Size(101, 24);
             this.lbConnecting.TabIndex = 17;
             this.lbConnecting.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.TTip.SetToolTip(this.lbConnecting, "How many threads that are trying to connect");
+            this.TTip.SetToolTip(this.lbConnecting, "연결 중 인 쓰레드 수");
             //
             // lbIdle
             //
@@ -643,7 +643,7 @@ namespace LOIC
             this.lbIdle.Size = new System.Drawing.Size(101, 24);
             this.lbIdle.TabIndex = 16;
             this.lbIdle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.TTip.SetToolTip(this.lbIdle, "How many threads that are without work. Should be 0");
+            this.TTip.SetToolTip(this.lbIdle, "쉬는 쓰레드 수, 쓰레드 수와 같다면 다시 공격하세요");
             //
             // label12
             //
@@ -651,7 +651,7 @@ namespace LOIC
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(101, 24);
             this.label12.TabIndex = 15;
-            this.label12.Text = "Downloaded";
+            this.label12.Text = "다운로드됨";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             //
             // label13
@@ -660,7 +660,7 @@ namespace LOIC
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(101, 24);
             this.label13.TabIndex = 14;
-            this.label13.Text = "Downloading";
+            this.label13.Text = "다운로드 중";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             //
             // label14
@@ -669,7 +669,7 @@ namespace LOIC
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(101, 24);
             this.label14.TabIndex = 13;
-            this.label14.Text = "Requesting";
+            this.label14.Text = "요청 중";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             //
             // label15
@@ -678,7 +678,7 @@ namespace LOIC
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(101, 24);
             this.label15.TabIndex = 12;
-            this.label15.Text = "Connecting";
+            this.label15.Text = "연결 중";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             //
             // label16
@@ -687,7 +687,7 @@ namespace LOIC
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(101, 24);
             this.label16.TabIndex = 11;
-            this.label16.Text = "Idle";
+            this.label16.Text = "Idle(쉬는 중)";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             //
             // label24
@@ -697,8 +697,8 @@ namespace LOIC
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(165, 14);
             this.label24.TabIndex = 14;
-            this.label24.Text = "github.com/NewEraCracker/LOIC";
-            this.TTip.SetToolTip(this.label24, "Go to official page");
+            this.label24.Text = "github.com/alforeplay/LOIC";
+            this.TTip.SetToolTip(this.label24, "한글화 한 사람의 깃헙을 봅니다");
             this.label24.Click += new System.EventHandler(this.label24_Click);
             //
             // textOLServer
@@ -753,7 +753,7 @@ namespace LOIC
             this.disableHive.Size = new System.Drawing.Size(163, 18);
             this.disableHive.TabIndex = 15;
             this.disableHive.TabStop = true;
-            this.disableHive.Text = "Manual Mode (Do it yourself)";
+            this.disableHive.Text = "수동 모드 (DIY)";
             this.disableHive.UseVisualStyleBackColor = true;
             this.disableHive.CheckedChanged += new System.EventHandler(this.disableHive_CheckedChanged);
             //

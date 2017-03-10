@@ -94,7 +94,7 @@ namespace LOIC
             this.MinimumSize = new System.Drawing.Size(500, 480);
             this.Name = "frmEULA";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Newfag\'s Low Orbit Ion Cannon End User License Agreement (EULA)";
+            this.Text = "Alforeplay\'s Low Orbit Ion Cannon End User License Agreement (EULA)";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -18,8 +18,8 @@ namespace LOIC
 {
 	public partial class frmMain : Form
 	{
-		const string AttackText = "IMMA CHARGIN MAH LAZER";
-		const string StpFldText = "Stop flooding";
+		const string AttackText = "알라후 앜후바르";
+		const string StpFldText = "멈추기";
 
 		private List<IFlooder> arr = new List<IFlooder>();
 		private StringCollection aUpOLSites = new StringCollection();
@@ -98,18 +98,18 @@ namespace LOIC
 					if(tShowStats.Enabled) tShowStats.Stop();
 
 					if (!Functions.ParseInt(txtPort.Text, 0, 65535, out iPort)) {
-						Wtf ("I don't think ports are supposed to be written like THAT.", silent);
+						Wtf ("포트는 그런 식으로 적는게 아니라고!!! (숫자)", silent);
 						return;
 					}
 
 					if (!Functions.ParseInt(txtThreads.Text, 1, 99, out iThreads)) {
-						Wtf ("What on earth made you put THAT in the threads field?", silent);
+						Wtf ("쓰레드 수는 숫자라고요!!!!", silent);
 						return;
 					}
 
 					sTargetIP = txtTarget.Text;
 					if (String.IsNullOrEmpty(sTargetIP) || String.IsNullOrEmpty(sTargetHost) || String.Equals(sTargetIP, "N O N E !"))
-						throw new Exception("Select a target.");
+						throw new Exception("타겟을 선택하세요.");
 
 					sMethod = cbMethod.Text;
 					protocol = Protocol.None;
@@ -118,24 +118,24 @@ namespace LOIC
 						// Analysis disable once EmptyGeneralCatchClause
 					} catch { }
 					if(protocol == Protocol.None) {
-						Wtf ("Select a proper attack method.", silent);
+						Wtf ("올바른 공격 방식을 골라주세요.", silent);
 						return;
 					}
 
 					sData = txtData.Text.Replace(@"\r", "\r").Replace(@"\n", "\n");
 					if(String.IsNullOrEmpty(sData) && (protocol == Protocol.TCP || protocol == Protocol.UDP)) {
-						Wtf ("Gonna spam with no contents? You're a wise fellow, aren't ya? o.O", silent);
+						Wtf ("공격 안할꺼야? 메세지좀 넣어주세요", silent);
 						return;
 					}
 
 					sSubsite = txtSubsite.Text;
 					if (!sSubsite.StartsWith ("/") && ((int)protocol >= (int)Protocol.HTTP)) {
-						Wtf ("You have to enter a subsite (for example \"/\")", silent);
+						Wtf ("서브사이트를 입력하세요. 예를 들어 http://naver.com/asdf 일경우 \"/asdf\" 을 입력하시면 됩니다", silent);
 						return;
 					}
 
 					if (!int.TryParse (txtTimeout.Text, out iTimeout) || iTimeout < 1) {
-						Wtf ("What's up with something like that in the timeout box? =S", silent);
+						Wtf ("타임아웃은 숫자입니다.", silent);
 						return;
 					}
 					if (iTimeout > 999)
@@ -242,7 +242,7 @@ namespace LOIC
 			}
 
 			new frmWtf().Show();
-			MessageBox.Show(message, "What the shit.");
+			MessageBox.Show(message, "야.. 너 대체 뭐하냐.");
 		}
 
 		/// <summary>
@@ -256,7 +256,7 @@ namespace LOIC
 				string tIP = txtTargetIP.Text.Trim().ToLowerInvariant();
 				if(tIP.Length == 0)
 				{
-					Wtf ("I think you forgot the IP.", silent);
+					Wtf ("아이피 적어주세요.", silent);
 					return;
 				}
 				try
@@ -269,7 +269,7 @@ namespace LOIC
 				}
 				catch(FormatException)
 				{
-					Wtf ("I don't think an IP is supposed to be written like THAT.", silent);
+					Wtf ("아이피는 x.x.x.x 처럼 생겼어요", silent);
 					return;
 				}
 			}
@@ -291,7 +291,7 @@ namespace LOIC
 				string tURL = txtTargetURL.Text.Trim().ToLowerInvariant();
 				if(tURL.Length == 0)
 				{
-					Wtf ("A URL is fine too...", silent);
+					Wtf ("URL.....", silent);
 					return;
 				}
 				if(!tURL.Contains("://"))
@@ -306,12 +306,12 @@ namespace LOIC
 				}
 				catch(UriFormatException)
 				{
-					Wtf ("I don't think a URL is supposed to be written like THAT.", silent);
+					Wtf ("URL좀 제대로 적어주세요", silent);
 					return;
 				}
 				catch(SocketException)
 				{
-					Wtf ("The URL you entered does not resolve to an IP!", silent);
+					Wtf ("이 URL은 존재하지 않는 URL입니다", silent);
 					return;
 				}
 			}
@@ -798,7 +798,7 @@ namespace LOIC
 		/// <param name="e">EventArgs.</param>
 		private void frmMain_Load(object sender, EventArgs e)
 		{
-			this.Text = String.Format("{0} | When harpoons, air strikes and nukes fail | v. {1}", Application.ProductName, Application.ProductVersion);
+			this.Text = String.Format("{0} | Alforeplay 한글화 버전 | v. {1}", Application.ProductName, Application.ProductVersion);
 		}
 
 		/// <summary>
